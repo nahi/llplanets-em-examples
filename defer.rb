@@ -3,6 +3,8 @@ require 'eventmachine'
 def invoke_blocking_process
   # It's blocking in CRuby!
   # OpenSSL::PKey::RSA.new(4096)
+  # a little better; it allows to switch Threads between iterations
+  # OpenSSL::PKey::RSA.new(4096) {}
   STDIN.gets
 end
 
